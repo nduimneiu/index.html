@@ -1,4 +1,4 @@
-!doctype html>
+!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -12,7 +12,7 @@
   <style>
     :root{--brand:#0a66c2;--muted:#666}
     *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;color:#111}
+    body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;color:#111;line-height:1.6}
     header{background:linear-gradient(90deg,var(--brand),#3aa0ff);color:#fff;padding:18px 20px}
     .container{max-width:1100px;margin:0 auto;padding:20px}
     .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
@@ -40,6 +40,18 @@
       .hero{grid-template-columns:1fr}
       .hero .hero-img{height:220px}
     }
+
+    /* Secciones nuevas */
+    section.text-block{
+      margin-top:40px;
+      background:#fafafa;
+      padding:25px;
+      border-radius:12px;
+      border:1px solid #eee;
+    }
+    section.text-block h2{
+      margin-top:0;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +69,31 @@
   </header>
 
   <main class="container">
+
+    <!-- Contenido mejorado para AdSense -->
+    <section class="text-block">
+      <h2>Sobre JMR Asociados</h2>
+      <p>
+        JMR Asociados es una tienda digital enfocada en ofrecer productos tecnológicos, accesorios
+        y dispositivos modernos con precios accesibles. Nuestra misión es brindar una experiencia
+        de compra simple y confiable, con descripciones reales, imágenes claras y atención cercana.
+      </p>
+      <p>
+        Trabajamos constantemente para agregar nuevos productos, mejorar nuestros servicios y mantener
+        una plataforma segura y transparente para nuestros visitantes. Todos los artículos que ofrecemos
+        están verificados y cumplen estándares de calidad.
+      </p>
+    </section>
+
+    <!-- Anuncio visible con contenido arriba (cumple políticas) -->
+    <ins class="adsbygoogle"
+         style="display:block;margin:20px 0"
+         data-ad-client="ca-pub-8763788932694623"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
     <section class="hero">
       <div>
         <h1>Bienvenido a <span style="color:var(--brand)">JMR Asociados</span></h1>
@@ -72,7 +109,29 @@
 
     <section>
       <h2 style="margin:10px 0">Productos destacados</h2>
+      <p style="color:#444;margin-bottom:15px">
+        Aquí encontrarás una selección de nuestros artículos tecnológicos más vendidos. Cada producto
+        incluye una descripción básica para ayudarte a elegir mejor.
+      </p>
       <div class="products" id="products"></div>
+    </section>
+
+    <section class="text-block">
+      <h2>Política de Privacidad</h2>
+      <p>
+        En JMR Asociados respetamos tu privacidad. No compartimos información personal con terceros
+        y solo utilizamos cookies para mejorar tu experiencia en nuestro sitio. Google AdSense puede
+        recopilar datos anónimos para personalizar anuncios.
+      </p>
+    </section>
+
+    <section class="text-block">
+      <h2>Contacto</h2>
+      <p>
+        Si necesitas ayuda, puedes contactarnos en:<br>
+        <strong>Correo:</strong> soporte@jmrasociados.com<br>
+        <strong>Horario:</strong> Lunes a viernes — 9:00 AM a 6:00 PM
+      </p>
     </section>
 
     <footer>
@@ -136,7 +195,7 @@
           <img src="${p.img}" alt="${p.titulo}">
           <div class="info">
             <div style="font-weight:600">${p.titulo}</div>
-            <div style="font-size:13px;color:var(--muted)">En stock</div>
+            <div style="font-size:13px;color:var(--muted)">En stock · Producto nuevo</div>
             <div class="price">$${p.precio.toFixed(2)}</div>
             <button class="add" onclick="addToCart(${p.id})">Agregar al carrito</button>
           </div>
